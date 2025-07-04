@@ -1,5 +1,7 @@
 # (21) Classification automatique des globules blancs à partir d’images microscopiques
 
+Il faut exécuter le notebook_final pour voir le projet
+
 ## Description du projet
 
 Nous avons à disposition un jeu de données comportant des images classifiées de globules blancs (disponibles dans le dossier barcelona de notre git). Celui-ci a déjà été pré-traité par Damien. Ces données sont sous-divisées en 3 jeux : entraînement, validation et test. 
