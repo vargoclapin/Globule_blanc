@@ -1,0 +1,54 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    </head>
+
+    <body>
+
+        <h1>
+            Macrophage recognition
+        </h1>
+
+        <div>
+            <p>
+                Welcome to this macrophage recognition model, based on computer vision algorithm VGG-16.
+            </p>
+
+            <p>
+                To use the model, simply upload your image (making sure the image is a square and that the macrophage is clearly visible).
+                <br> 
+                The algorithm will then classify your picture into one of 8 categories, namely:
+                <ul>
+                    <li>Basophil</li>
+                    <li>Erythroblast</li>
+                    <li>Eosinophil</li>
+                    <li>Immature granulocytes</li>
+                    <li>Lymphocyte</li>
+                    <li>Monocyte</li>
+                    <li>Neutrophil</li>
+                    <li>Platelet.</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class = "center">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <br>
+                <input type="file" id="myPicture" name="myPicture">
+                <br>
+                <br>
+                <input type="radio" id="tl" name="model" value="tl">
+                <label for="tl"> Transfer-learning</label>
+                <br>
+                <input type="radio" id="ft" name="model" value="ft">
+                <label for="ft"> Fine-tuning</label>
+                <br>
+                <br>
+                <input type="submit">
+            </form>
+        </div>
+
+    </body>
+
+</html>
